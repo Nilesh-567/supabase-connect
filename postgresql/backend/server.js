@@ -1,9 +1,9 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { Pool } = require("pg");
-const dotenv = require("dotenv");
+//const dotenv = require("dotenv");
 
-dotenv.config(); // Load environment variables from .env
+//dotenv.config(); // Load environment variables from .env
 
 const app = express();
 const port = 3000;

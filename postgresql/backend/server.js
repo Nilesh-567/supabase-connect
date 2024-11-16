@@ -10,7 +10,7 @@ const port = 3000;
 
 // PostgreSQL connection
 const pool = new Pool({
-    connectionString: process.env.SUPABASE_DBURI  ||  "postgresql://postgres.scapzmmddiwdkpjhhxuo:Nilesh13122@@aws-0-ap-southeast-1.pooler.supabase.com:6543/college" , // Use your database URL here
+    connectionString: "postgresql://postgres.scapzmmddiwdkpjhhxuo:Nilesh13122@@aws-0-ap-southeast-1.pooler.supabase.com:6543/college" , // Use your database URL here
     ssl:false
 });
 

@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     const responseElement = document.getElementById("response");
 
     try {
-        const response = await fetch("http://localhost:3000/login", {
+        const response = await fetch("https://supabase-connect.vercel.app/login", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

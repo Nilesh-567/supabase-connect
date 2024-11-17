@@ -1,6 +1,7 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { Pool } = require("pg");
+const cors = require("cors");
 const dotenv = require("dotenv");
 
 dotenv.config(); // Load environment variables from .env
@@ -18,6 +19,7 @@ const pool = new Pool({
 
 // Middleware
 app.use(bodyParser.json());
+app.use(cors());
 //app.use(express.static('../frontend')); 
 
 

@@ -17,7 +17,7 @@ const pool = new Pool({
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static('../frontend')); 
+// app.use(express.static('../frontend')); 
 
 
 // Endpoint to check database connection
@@ -25,7 +25,7 @@ app.get('/*', async (req, res) => {
     try {
         // Test the connection
         const client = await pool.connect();
-        //res.send('Database is connected successfully!');
+        res.send('Database is connected successfully!');
         console.log('database connected'); 
         client.release(); // Release the client back to the pool
     } catch (err) {

@@ -1,23 +1,23 @@
 const express = require("express");
 const bodyParser = require("body-parser");
 const { Pool } = require("pg");
-//const dotenv = require("dotenv");
+const dotenv = require("dotenv");
 
-//dotenv.config(); // Load environment variables from .env
+dotenv.config(); // Load environment variables from .env
 
 const app = express();
 const port = 3000;
 
 // PostgreSQL connection
 const pool = new Pool({
-    connectionString: "postgresql://postgres.scapzmmddiwdkpjhhxuo:Nilesh13122@@aws-0-ap-southeast-1.pooler.supabase.com:6543/college" , // Use your database URL here
+    connectionString: process.env.SUPABASE_DBURI || "postgresql://postgres.scapzmmddiwdkpjhhxuo:Nilesh13122@@aws-0-ap-southeast-1.pooler.supabase.com:6543/college" , // Use your database URL here
     ssl:false
 });
 
 
 // Middleware
 app.use(bodyParser.json());
-app.use(express.static('../frontend')); 
+//app.use(express.static('../frontend')); 
 
 
 // Endpoint to check database connection

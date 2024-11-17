@@ -41,12 +41,12 @@ app.post("/login", async (req, res) => {
 try {
         // Test the connection
         const client = await pool.connect();
-        //res.send('Database is connected successfully!');
-        console.log('database connected'); 
+        res.send('Database is connected successfully!');
+        //console.log('database connected'); 
         //  client.release(); // Release the client back to the pool
             } catch (err) {
         console.error('Database connection error:', err);
-        //res.status(500).send('Failed to connect to the database.');
+        res.status(500).send('Failed to connect to the database.');
     }
 
 
@@ -64,13 +64,13 @@ try {
        
 
         if (result.rows.length > 0) {
-            res.json({ success: true });
+            //res.json({ success: true });
         } else {
-            res.json({ success: false });
+            //res.json({ success: false });
         }
     } catch (error) {
         console.error("Error validating user:", error);
-        res.status(500).json({ success: false });
+        //res.status(500).json({ success: false });
     }
 });
 

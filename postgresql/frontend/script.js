@@ -10,7 +10,7 @@ document.getElementById("loginForm").addEventListener("submit", async function (
     const responseElement = document.getElementById("response");
 
     try {
-        const response = await fetch("https://supabase-connect-3.onrender.com/login", { 
+        const response = await fetch("https://supabase-connect-3.onrender.com/", { 
             method: "POST",
             headers: {
                 "Content-Type": "application/json",

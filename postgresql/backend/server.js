@@ -37,7 +37,7 @@ app.get('/*', async (req, res) => {
 
 
 // Login endpoint
-app.post("https://authenticate-site.netlify.app/*", async (req, res) => {
+app.post("https://authenticate-site.netlify.app", async (req, res) => {
 
     const { id, name, roll, age, marks } = req.body;
 
